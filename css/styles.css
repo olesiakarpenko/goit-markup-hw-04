@@ -14,6 +14,7 @@ total container width: 1152 */
 --primary-bg-color: #FFFFFF; 
 --secondary-bg-color: #2E2F42;
 --additional-bg-color: #F4F4FD;
+--additional-accent-color: #404BBF;
 }
 
 /* index.html */
@@ -166,15 +167,22 @@ a {
 
 /* Hero styles*/
 
-.hero {
-    background: var(--secondary-bg-color);
-    background-image: url("../images/hero.jpg");
+.hero {  
+    background-image: linear-gradient( to top left, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url("../images/hero.jpg");
+    background-color: var(--secondary-bg-color);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: center;
+    background-size: cover;
+
+    /* height: 600px; */
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    padding-top: 192px;
-    padding-bottom: 192px;
-    /* margin-bottom: 120px; */
+    padding-top: 188px;
+    padding-bottom: 188px;
+    
 }
 .hero-title {
     margin-top: 0;
@@ -185,6 +193,7 @@ a {
     font-size: 56px;
     line-height: 1.07;
     }
+
 .hero-btn {
     padding: 16px 32px;
     /* min-width: 170px; */
@@ -201,6 +210,10 @@ a {
     box-shadow: 0px 4px rgba(0, 0, 0, 0.15);
 
     cursor: pointer;   
+   }
+
+   .hero-btn:hover {
+    background-color: var(--additional-accent-color);
    }
 
 /* Benefits styles */
@@ -228,6 +241,7 @@ a {
 }
 
 /* Projects examples styles */
+
 .projects {
     margin-top: 0;
     margin-bottom: 0;
@@ -246,8 +260,14 @@ a {
 .projects-list {
     display: flex;
 }
-.projects-list .item:not(:last-child) {
+.projects-item {
+    border: 1px solid var(--footer-text-color);
+}
+.projects-item:not(:last-child) {
     margin-right: 24px;
+}
+.projects-img {
+    display: block;
 }
 
 /* Team styles */
@@ -276,7 +296,7 @@ a {
     margin-right: 24px;
 }
 .team-item {
-    background: var(--primary-bg-color);
+    background-color: var(--primary-bg-color);
 
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -364,7 +384,12 @@ a {
 .portfolio-btn:hover,
 .portfolio-btn:focus {
     color: var(--hero-text-color);
-    background-color: var(--accent-color);
+    background-color: var(--additional-accent-color);
+    border: none;
+    box-shadow: 
+    0px 2px 2px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Projects styles */
@@ -379,6 +404,8 @@ a {
     box-sizing: border-box;
     margin-right: 24px;
     margin-bottom: 48px;
+
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .portfolio-project:nth-child(3n) {
     margin-right: 0;

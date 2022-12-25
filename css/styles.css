@@ -168,6 +168,9 @@ a {
 
 .hero {
     background: var(--secondary-bg-color);
+    background-image: url("../images/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     text-align: center;
     padding-top: 192px;
     padding-bottom: 192px;

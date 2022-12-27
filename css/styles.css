@@ -15,6 +15,7 @@ total container width: 1152 */
 --secondary-bg-color: #2E2F42;
 --additional-bg-color: #F4F4FD;
 --additional-accent-color: #404BBF;
+--subtle-text-color: #8E8F99;
 }
 
 /* index.html */
@@ -363,7 +364,6 @@ a {
     height: 16px;
     padding: 12px;
     fill:var(--footer-logo-color);
-    /* background-color: var(--accent-color); */
     border: none;
     margin: 0;
 }
@@ -383,16 +383,34 @@ a {
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.11;
+    line-height: 1.11; 
 }
 .customers-list {
     display: flex;
-    justify-content: center;
 }
 .customers-item {
     width: 168px;
-    height: 88px;
-    border-radius: ;
+    /* height: 88px; */
+    border: 1px solid var(--subtle-text-color);
+    border-radius: 4px;
+    padding: 16px 32px; 
+}
+.customers-item:hover {
+    border: 1px solid var(--additional-accent-color)
+}
+.customers-item:not(:last-child) {
+    margin-right: 24px;
+}
+.customers-icon {
+    justify-content: center;
+    width: 104px;
+    height: 56px;
+    margin: 0;
+    padding: 0;
+    fill: var(--subtle-text-color);
+}
+.customers-icon:hover {
+    fill: var(--additional-accent-color);
 }
 
 /* Footer styles */

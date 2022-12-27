@@ -16,6 +16,7 @@ total container width: 1152 */
 --additional-bg-color: #F4F4FD;
 --additional-accent-color: #404BBF;
 --subtle-text-color: #8E8F99;
+--succes-color: #31D0AA;
 }
 
 /* index.html */
@@ -422,6 +423,16 @@ a {
     padding-bottom: 100px;
     background: var(--secondary-bg-color);
 }
+.ftr-content {
+    display: flex;
+}
+.ftr-first {
+    margin-right: 120px;
+}
+.logo {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
 .logo-ftr {
     color: var(--footer-logo-color);
     font-family: 'Raleway', sans-serif;
@@ -432,10 +443,43 @@ a {
     letter-spacing: 0.03em;
 }
 .ftr-text{
-    margin-top: 16px;
-    margin-bottom: 0;
+    margin: 0;
     color: var(--footer-text-color);
     width: 264px;
+}
+.ftr-second {
+    justify-content: left;
+}
+.ftr-media-title {
+    color: var(--hero-text-color);
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+.ftr-icons-list {
+    display: flex;
+}
+.ftr-media {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+}
+.ftr-media:not(:last-child) {
+    margin-right: 16px;
+}
+.ftr-media:hover {
+    background-color: var(--succes-color);
+}
+/* .ftr-media-link:hover,
+.ftr-media-link:focus {
+    background-color: var(--succes-color);
+} */
+.ftr-icon {
+    width: 24px;
+    height: 24px;
+    justify-content: center;
 }
 
 /* portfolio.html */
